@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "build": "cd teacher_plus && npm run build",
+    "install": "cd teacher_plus && npm install",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix teacher_plus && npm run build --prefix teacher_plus"
   },
   "keywords": [],
