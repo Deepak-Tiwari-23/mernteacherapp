@@ -29,6 +29,9 @@ mongoose.set('useFindAndModify', false);
 
 if (process.env.NODE_ENV == "production") {
     app.use(express.static("teacher_plus/build"));
+    app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(__dirname,"teacher_plus",'build','index.html'));
+    })
 }
 
 app.listen(PORT, ()=>{
